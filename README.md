@@ -1,49 +1,42 @@
 ## Members
-Henry Forsyth, Computer Engineering Student (2024)
-rhforsythjr@vt.edu
+Eddie Pritchard, Camille Lyles
+epritchard@vt.edu, camillevl@vt.edu
 
 ## Mentor
-MENTOR NAME HERE
+Eddie Pritchard
 
 ## Current Status
 IN PROGRESS
 
 ## Project Overview
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula, odio eu dictum aliquet, enim elit tempor diam, quis volutpat mi eros ut nisi. Aliquam luctus orci eget accumsan porta. Proin sollicitudin ultricies lacus et varius. Pellentesque tempor vehicula tempus. Integer semper id lorem vehicula tristique. Suspendisse nec placerat libero, eget aliquet eros. Phasellus iaculis quis lorem in ultrices. Nunc lobortis odio at sem pretium dictum. Integer sed tellus quis lorem pretium posuere.
+Arduino based moisture sensor planted in soil of plant pot. Arduino controls water delivery valve according to watering profile. Arduino also reads lighting sensor while controlling a relay which gates the state of a grow light. Various lighting and watering profiles will be experimented with across several different plant species. Down the line, humidity sensing and control of a fan may be added.
 
 ## Educational Value Added
 
-Vivamus dapibus iaculis dui. Nullam vitae arcu a nisi elementum semper eu eu velit. Suspendisse vel dictum lacus. Sed facilisis luctus consequat. Donec vulputate eu dolor in molestie. Maecenas pretium sem non tellus facilisis sollicitudin id ut nulla. In condimentum orci nisi, sagittis facilisis neque convallis eget. Duis ut sem cursus, placerat mi pellentesque, mollis eros. Integer efficitur blandit elit, sed egestas sem porta in. Mauris euismod nulla ac tellus tempus, eu egestas dui molestie. Proin faucibus enim quis consequat sodales. Pellentesque eleifend blandit augue et laoreet. Phasellus vel posuere nisi, ac aliquam arcu.
+This will provide a experimentation platform to grow knowledge of electronic control systems of a 24v DC solenoid and accompanying control circuitry. Will also be a challenging computer engineering problem in order to synchronize the states of the water/light/humidity control loops with the profiles of several different plant species. Additionally, experimentation with different types of plants will contribute to the knowledge base of botany. 
 
 ## Tasks
 
-<!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
+Already completed the solenoid valve control circuitry for delivering water. Now need to integrate this circuit onto a PCB which includes a battery or several 9v batteries. Desired battery voltage sensor could be added to alarm when battery is dropping as the 9v batteries have proven to discharge quickly when opening the water solenoid valve.
 
-## Design Decisions
+Moisture sensor and light sensors need to be added to the arduino/(pi).
 
-<!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
+Relay for grow light needs to be added. This system might need to be a COTS 120v AC switch or a motor controlling a physical switch in line on the power cord of a grow light if a 120v relay is too dangerous. 
 
-## Design Misc
 
-<!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
-
-## Steps for Documenting Your Design Process
-
-<!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
 
 ## BOM + Component Cost
 
-<!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
+Solenoid already owned.
+Arduino already owned.
+Grow light bar already owned.
+~50$ needed for PCB for solenoid valve control board.
+Photosensor already owned.
+
+Need to buy or build a moisture meter.
 
 ## Timeline
 
-<!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
+PCB designed by 2/4/24.
 
-## Useful Links
-
-<!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
-
-## Log
-
-<!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
