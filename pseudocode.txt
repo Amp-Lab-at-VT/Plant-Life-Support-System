@@ -1,0 +1,41 @@
+#This is the pseudocode for the plant watering project!
+
+
+#the following method is the starting place for the program.
+Begin/Reset:
+	set the dryness threshold (depends upon plant)
+	set the light to daytime
+	set the daytime counter to 12h
+	set the watering delay counter to (differs per plant)
+	go to Moisture_Check
+
+
+#the following method determines if the plant needs to be watered.
+Moisture_Check:
+	Read the moisture sensor (get value)
+	If the retrieved moisture value is greater than the dryness threshold (if wet):
+		go to Daytime_Check
+	Else (if its dry):
+		If the water delay counter > 0 (still need to wait to water):
+			go to Daytime_Check
+		Else (its time to water)
+			go to Water_da_plant
+			
+	
+#the following method checks the daytime counter in order to control if the plant is being lit or not.	
+Daytime_Check:
+	If the daytime counter is 0 (it has been 12h):
+		Set light to opposite state
+		Reset the daytime_counter
+		go to Moisture Check
+	Else (if it has not been 12 hours yet):
+		decrement daytime counter by approximate time taken to implement state machine
+		go to Moisture Check
+
+
+#The following method waters the plant!
+Water_da_plant:
+	actuate the valve for certain amount of time (based on plant size)
+	reset the watering delay counter
+	go to Moisture_Check
+	
