@@ -1,0 +1,32 @@
+
+####NOTES FOR COMPILER RULES
+-need a hardware HAL call to write/read specific registers (can use keyword "hardware")
+
+Label Begin:
+	DRYNESS_THRESH = ####
+	daytime_state = true	#true is day, false is night
+	daytime_counter = 12	#this aint gunna stay synced
+	water_delay_counter = 1000	#seconds
+	Moisture_Check()
+
+Moisture_Check:
+	if Read_Moisture() > DRYNESS_THRESH:
+		#it is wet
+		Daytime_Check()
+	else:
+		#it is dry (water the plant)
+	
+
+
+Read_Moisture():		#in order to facilitate function calls need to auto record return to address.
+	hardware.write(#control register ID, 1)	#set the specific sensor select to enabled state
+	moisture_value = hardware.read(#input register ID)
+	return moisture_value
+
+
+Daytime_Check():
+	if daytime_counter > 0:
+		#decrement counter
+	else:
+		#it is time to swap the light state
+
